@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PesquisarWS", "PesquisarWS\PesquisarWS.vbproj", "{5F905B05-16A7-43CE-AFB3-37D5FB3F44D8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WSMS", "WSMS\WSMS.vbproj", "{618F68A9-E0D7-43BA-8C4C-3D12A74BC343}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "XMail", "XMail\XMail.vbproj", "{B5B46A78-5D7E-4B2F-9EFC-72AD8F7B3E71}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HTTP", "HTTP\HTTP.vbproj", "{E0DE54FA-E221-4953-BA37-1BA89A112A54}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccProjectName0 = \u0022$/NEO/Classes\u0022,\u0020ITNAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = PesquisarWS\\PesquisarWS.vbproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = PesquisarWS\\
+		SccProjectUniqueName2 = WSMS\\WSMS.vbproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = WSMS\\
+		SccProjectUniqueName3 = XMail\\XMail.vbproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = XMail\\
+		SccProjectUniqueName4 = HTTP\\HTTP.vbproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = HTTP\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F905B05-16A7-43CE-AFB3-37D5FB3F44D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F905B05-16A7-43CE-AFB3-37D5FB3F44D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F905B05-16A7-43CE-AFB3-37D5FB3F44D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F905B05-16A7-43CE-AFB3-37D5FB3F44D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618F68A9-E0D7-43BA-8C4C-3D12A74BC343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618F68A9-E0D7-43BA-8C4C-3D12A74BC343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618F68A9-E0D7-43BA-8C4C-3D12A74BC343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618F68A9-E0D7-43BA-8C4C-3D12A74BC343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B46A78-5D7E-4B2F-9EFC-72AD8F7B3E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B46A78-5D7E-4B2F-9EFC-72AD8F7B3E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B46A78-5D7E-4B2F-9EFC-72AD8F7B3E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B46A78-5D7E-4B2F-9EFC-72AD8F7B3E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0DE54FA-E221-4953-BA37-1BA89A112A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0DE54FA-E221-4953-BA37-1BA89A112A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0DE54FA-E221-4953-BA37-1BA89A112A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0DE54FA-E221-4953-BA37-1BA89A112A54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

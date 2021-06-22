@@ -1,0 +1,9 @@
+bin\Release\HTTP.dll
+bin\Release\HTTP.pdb
+bin\Release\HTTP.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\HTTP.Resources.resources
+obj\Release\HTTP.vbproj.GenerateResource.Cache
+obj\Release\HTTP.dll
+obj\Release\HTTP.xml
+obj\Release\HTTP.pdb

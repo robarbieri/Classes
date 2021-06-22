@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Waterfall", "Waterfall\Waterfall.csproj", "{07AFC8C1-C5E9-4C3F-8FEA-500C54668557}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/NEO/Waterfall\u0022,\u0020PWNAAAAA
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection0 = Waterfall\\
+		SccProjectUniqueName1 = Waterfall\\Waterfall.csproj
+		SccLocalPath1 = ..
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = Waterfall\\Waterfall\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07AFC8C1-C5E9-4C3F-8FEA-500C54668557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AFC8C1-C5E9-4C3F-8FEA-500C54668557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AFC8C1-C5E9-4C3F-8FEA-500C54668557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AFC8C1-C5E9-4C3F-8FEA-500C54668557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.afinder.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.afinder.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.afinder.com.br">
+      <s:element name="BuscaFoneticaXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Busca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fonetica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Direcao" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bases" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaFoneticaXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaFoneticaXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="BuscaXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fone" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bases" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaProximidadesXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SentidoProximidade" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaProximidadesXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaProximidadesXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCPFXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bases" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCPFXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaCPFXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaAutXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fone" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Higienizar" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bases" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaAutXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaAutXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaParentesXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bases" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaParentesXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaParentesXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCEPXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaCEPXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaCEPXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HigienizarXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HigienizarXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HigienizarXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BuscaFoneticaXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaFoneticaXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaFoneticaXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaFoneticaXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaFoneticaXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaProximidadesXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaProximidadesXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaProximidadesXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaProximidadesXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaProximidadesXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCPFXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaCPFXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCPFXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaCPFXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCPFXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaAutXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaAutXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaAutXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaAutXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaAutXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaParentesXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaParentesXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaParentesXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaParentesXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaParentesXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaCEPXml" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaCEPXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaCEPXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="HigienizarXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:HigienizarXml" />
+  </wsdl:message>
+  <wsdl:message name="HigienizarXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:HigienizarXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="HigienizarXmlAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicesSoap">
+    <wsdl:operation name="BuscaFoneticaXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Busca Fonética - Primeiro parâmetro Busca texto com informações que deseja buscar - Segundo parâmetro Fonética campo que deseja realizar a fonética - Terceiro parâmetro Direção, direção que deseja que ocorra a fonética seguindo a seguinte lógica: Exato = 0 || Esquerda = 1 || Direita = 2 || Bi-direcional(Esquerda/Direita) = 3 - Demais parâmetros são complementos para facilitar a busca melhorando assim a performance - Último Parâmetro a Base que deseja buscar("FIXO/MOVEL/SAT"), podendo combinar as bases, por exemplo para uma busca nas 3 bases basta combinar os valores: "FIXOMOVELSAT"</wsdl:documentation>
+      <wsdl:input message="tns:BuscaFoneticaXmlSoapIn" />
+      <wsdl:output message="tns:BuscaFoneticaXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Busca - Último Parâmetro a Base que deseja buscar("FIXO/MOVEL/SAT"), podendo combinar as bases, por exemplo para uma busca nas 3 bases basta combinar os valores: "FIXOMOVELSAT"</wsdl:documentation>
+      <wsdl:input message="tns:BuscaXmlSoapIn" />
+      <wsdl:output message="tns:BuscaXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaProximidadesXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Proximidades - Parâmetro SentidoProximidade: Esquerda = 0 / Direita = 1 / Esquerda-Direita = 2 / Todos que tenham Complemento para o Número pesquisado("útil para prédios, bloco, apartamentos...") = 3</wsdl:documentation>
+      <wsdl:input message="tns:BuscaProximidadesXmlSoapIn" />
+      <wsdl:output message="tns:BuscaProximidadesXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCPFXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com CPFs - Último Parâmetro a Base que deseja buscar("FIXO/MOVEL/SAT"), podendo combinar as bases, por exemplo para uma busca nas 3 bases basta combinar os valores: "FIXOMOVELSAT"</wsdl:documentation>
+      <wsdl:input message="tns:BuscaCPFXmlSoapIn" />
+      <wsdl:output message="tns:BuscaCPFXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaAutXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Busca Automática - Último Parâmetro a Base que deseja buscar("FIXO/MOVEL/SAT"), podendo combinar as bases, por exemplo para uma busca nas 3 bases basta combinar os valores: "FIXOMOVELSAT"</wsdl:documentation>
+      <wsdl:input message="tns:BuscaAutXmlSoapIn" />
+      <wsdl:output message="tns:BuscaAutXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaParentesXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Parentes - Último Parâmetro a Base que deseja buscar("FIXO/MOVEL/SAT"), podendo combinar as bases, por exemplo para uma busca nas 3 bases basta combinar os valores: "FIXOMOVELSAT"</wsdl:documentation>
+      <wsdl:input message="tns:BuscaParentesXmlSoapIn" />
+      <wsdl:output message="tns:BuscaParentesXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEPXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Endereço do CEP</wsdl:documentation>
+      <wsdl:input message="tns:BuscaCEPXmlSoapIn" />
+      <wsdl:output message="tns:BuscaCEPXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HigienizarXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Xml com Endereço Higienizado</wsdl:documentation>
+      <wsdl:input message="tns:HigienizarXmlSoapIn" />
+      <wsdl:output message="tns:HigienizarXmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicesSoap" type="tns:WebServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscaFoneticaXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaFoneticaXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaFoneticaXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaProximidadesXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaProximidadesXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaProximidadesXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCPFXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaCPFXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaCPFXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaAutXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaAutXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaAutXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaParentesXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaParentesXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaParentesXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEPXml">
+      <soap:operation soapAction="http://www.afinder.com.br/BuscaCEPXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BuscaCEPXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HigienizarXml">
+      <soap:operation soapAction="http://www.afinder.com.br/HigienizarXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:HigienizarXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServicesSoap12" type="tns:WebServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscaFoneticaXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaFoneticaXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaFoneticaXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaProximidadesXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaProximidadesXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaProximidadesXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCPFXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaCPFXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaCPFXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaAutXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaAutXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaAutXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaParentesXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaParentesXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaParentesXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaCEPXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/BuscaCEPXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BuscaCEPXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HigienizarXml">
+      <soap12:operation soapAction="http://www.afinder.com.br/HigienizarXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:HigienizarXmlAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServices">
+    <wsdl:port name="WebServicesSoap" binding="tns:WebServicesSoap">
+      <soap:address location="http://www.afinder.com.br/afinderx/WebServiceS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServicesSoap12" binding="tns:WebServicesSoap12">
+      <soap12:address location="http://www.afinder.com.br/afinderx/WebServiceS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

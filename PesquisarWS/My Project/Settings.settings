@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="PesquisarWS_aFinder_WebServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.afinder.com.br/afinderx/WebServiceS.asmx</Value>
+    </Setting>
+    <Setting Name="PesquisarWS_InforMarketing_WEBServiceScore" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.informarketing.com/webservice_v7/webScore.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

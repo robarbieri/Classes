@@ -1,0 +1,9 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\ControleMessageBox.Resources.resources
+obj\Release\ControleMessageBox.vbproj.GenerateResource.Cache
+bin\Release\ControleMessageBox.dll
+bin\Release\ControleMessageBox.pdb
+bin\Release\ControleMessageBox.xml
+obj\Release\ControleMessageBox.dll
+obj\Release\ControleMessageBox.xml
+obj\Release\ControleMessageBox.pdb

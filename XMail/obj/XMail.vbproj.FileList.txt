@@ -1,0 +1,9 @@
+bin\Release\XMail.dll
+bin\Release\XMail.pdb
+bin\Release\XMail.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\XMail.Resources.resources
+obj\Release\XMail.vbproj.GenerateResource.Cache
+obj\Release\XMail.dll
+obj\Release\XMail.xml
+obj\Release\XMail.pdb

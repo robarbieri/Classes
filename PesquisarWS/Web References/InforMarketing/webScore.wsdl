@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.informarketing.com/WebService/webscore" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.informarketing.com/WebService/webscore" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.informarketing.com/WebService/webscore">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="getLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSenha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDominio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLogout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCod_Autenticador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLogoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getLogoutResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNotaScore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCod_Autenticador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strParamCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNotaScoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNotaScoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_DataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCod_Autenticador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strParamCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_DataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLista_Dados_DataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_String_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCod_Autenticador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strParamCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_String_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLista_Dados_String_XMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_String">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCod_Autenticador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strParamCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLista_Dados_StringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLista_Dados_StringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:getLogin" />
+  </wsdl:message>
+  <wsdl:message name="getLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:getLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:getLogout" />
+  </wsdl:message>
+  <wsdl:message name="getLogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:getLogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNotaScoreSoapIn">
+    <wsdl:part name="parameters" element="tns:getNotaScore" />
+  </wsdl:message>
+  <wsdl:message name="getNotaScoreSoapOut">
+    <wsdl:part name="parameters" element="tns:getNotaScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_DataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_DataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_DataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_String_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_String_XML" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_String_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_String_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_StringSoapIn">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_String" />
+  </wsdl:message>
+  <wsdl:message name="getLista_Dados_StringSoapOut">
+    <wsdl:part name="parameters" element="tns:getLista_Dados_StringResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WEBServiceScoreSoap">
+    <wsdl:operation name="getLogin">
+      <wsdl:input message="tns:getLoginSoapIn" />
+      <wsdl:output message="tns:getLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLogout">
+      <wsdl:input message="tns:getLogoutSoapIn" />
+      <wsdl:output message="tns:getLogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNotaScore">
+      <wsdl:input message="tns:getNotaScoreSoapIn" />
+      <wsdl:output message="tns:getNotaScoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_DataSet">
+      <wsdl:input message="tns:getLista_Dados_DataSetSoapIn" />
+      <wsdl:output message="tns:getLista_Dados_DataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_String_XML">
+      <wsdl:input message="tns:getLista_Dados_String_XMLSoapIn" />
+      <wsdl:output message="tns:getLista_Dados_String_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_String">
+      <wsdl:input message="tns:getLista_Dados_StringSoapIn" />
+      <wsdl:output message="tns:getLista_Dados_StringSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WEBServiceScoreSoap" type="tns:WEBServiceScoreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLogin">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogout">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getLogout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotaScore">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getNotaScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_DataSet">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getLista_Dados_DataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_String_XML">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getLista_Dados_String_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLista_Dados_String">
+      <soap:operation soapAction="http://www.informarketing.com/WebService/webscore/getLista_Dados_String" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WEBServiceScore">
+    <wsdl:port name="WEBServiceScoreSoap" binding="tns:WEBServiceScoreSoap">
+      <soap:address location="http://www.informarketing.com/webservice_v7/webScore.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
